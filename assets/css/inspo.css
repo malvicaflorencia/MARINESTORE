@@ -1,0 +1,69 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 70px; /* altura del menú */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 70px); /* alto menos menú */
+  background-image: url('../img/fondohome.jpg');
+  background-repeat: repeat-x;
+  background-size: auto;
+  background-position: top left;
+  z-index: -2;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  background-color: rgba(0, 0, 0, 0.67);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.seccion-inspo {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.seccion-inspo h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #A68E6D;
+}
+
+/* Masonry layout con columnas */
+.inspo-grid {
+  column-count: 4;
+  column-gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.inspo-grid img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 12%;
+  display: inline-block;
+}
+
+/* Responsive: 2 columnas en pantallas medianas */
+@media (max-width: 768px) {
+  .inspo-grid {
+    column-count: 2;
+    column-gap: 10px;
+  }
+}
+
+/* También 2 columnas en pantallas pequeñas (IG, celular, etc) */
+@media (max-width: 480px) {
+  .inspo-grid {
+    column-count: 2;
+    column-gap: 10px;
+  }
+}

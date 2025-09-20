@@ -1,0 +1,238 @@
+body {
+    background-color: #d7cfcf;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ----------Título-------------- */
+h1 {
+    color: rgb(175, 156, 156);
+    font-size: 70px;
+    font-weight: 100;
+    text-align: right;
+    margin: -20px 50% 40px 0;
+}
+
+.nombreProducto {
+    margin-top: 0.3%;
+    font-weight: 100;
+}
+
+/* ------------- general-------------- */
+.compra {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+    left: 30%;
+}
+
+.compra img {
+    width: 40px;
+    height: auto;
+}
+
+.detalle-img.carrusel {
+    position: relative;
+    width: 400px;
+    float: right;
+    margin-top: -160px;
+    margin-right: 10%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.detalle-img.carrusel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: none;
+    border-radius: 12px;
+}
+
+.detalle-img.carrusel img:first-child {
+    display: block;
+}
+
+.detalle-img.carrusel button.prev,
+.detalle-img.carrusel button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.detalle-img.carrusel button.prev:hover,
+.detalle-img.carrusel button.next:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.detalle-img.carrusel button.prev {
+    left: 10px;
+}
+
+.detalle-img.carrusel button.next {
+    right: 10px;
+}
+
+.descripcion,
+.precio-producto,
+.selector-talle {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0px 30% 40px 150px;
+    text-align: right;
+    max-width: 600px;
+    color: rgb(84, 75, 75);
+    word-spacing: 7px;
+}
+
+.selector-talle label,
+.selector-talle select {
+    font-size: 15px;
+    font-weight: 400;
+    color: #544b4b;
+    margin-right: 10px;
+}
+
+.canasto {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+#zona2 {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#agregarItem,
+#sacarItem {
+    margin-top: 30px;
+    background-color: #ad9e9e;
+    color: #ffffff;
+    border-radius: 50px;
+    border-style: none;
+    padding: 12px 28px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#agregarItem:hover,
+#sacarItem:hover {
+    background-color: white;
+    color: #ad9e9e;
+}
+
+a {
+    margin-top: 30px;
+    background-color: #ad9e9e;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: white;
+    color: #ad9e9e;
+}
+
+.total-carrito {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #5e4d4d;
+    font-weight: 600;
+}
+
+nav a {
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    margin-top: 0%;
+    padding: 0%;
+}
+
+nav a.activo {
+    font-weight: 500;
+    color: #8b6f4f;
+}
+
+select:disabled,
+#agregarItem:disabled,
+#sacarItem:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: grayscale(50%);
+    pointer-events: none;
+}
+
+
+@media (max-width: 1000px) {
+    .detalle-img.carrusel {
+        float: none;
+        width: 100%;
+        max-width: 250px;
+        margin: 20px auto 0 auto;
+    }
+
+    .descripcion {
+        font-size: 10px;
+        margin: 20px 6% -30px 18%;
+    }
+
+    h1 {
+        color: rgb(175, 156, 156);
+        font-size: 50px;
+        font-weight: 200;
+        text-align: right;
+        margin: 0px 0% 0px 0;
+    }
+
+    p, h2, .selector-talle label,
+    .selector-talle select {
+        font-size: 10px;
+        font-weight: 300;
+        color: rgb(84, 75, 75);
+        text-align: left;
+        margin-left: 0%;
+    }
+
+    #agregarItem,
+    #sacarItem,
+    a {
+        font-size: 5px;
+        padding: 1px 20px;
+    }
+
+    .botones-carrito {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

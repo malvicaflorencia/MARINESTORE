@@ -1,0 +1,149 @@
+header, .menu-principal {
+  position: fixed; /* o absolute si prefieres */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;  /* más alto que .fondo-repetido */
+  color: white;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1{ /*marine store*/
+    font-size: 100px;
+    font-weight: 200;
+    font-family: Montserrat;
+    letter-spacing: 0.2cap;
+}
+
+.btn-explore{
+  background-color: black;
+  color:white;
+  font-family: Montserrat;
+  padding: 20px;
+}
+/* Fondo y texto oscurecido de la imagen */
+.fondorepetido {
+  position: relative;        /* necesario para posicionar overlay */
+  width: 100%;
+  height: 580px;
+  background-image: url('../img/fondohome.jpg');
+  background-repeat: repeat-x;
+  background-size: auto;
+  background-position: top left;
+  z-index: -1;               /* para quedar detrás, junto con posicionamiento */
+}
+
+.fondorepetido .overlay {
+  position: absolute;        /* overlay ocupa todo el fondo */
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4); /* negro con 40% opacidad */
+  pointer-events: none;      /* no interfiere con clicks */
+  z-index: 1;                /* encima del fondo */
+}
+
+
+.contenido-texto {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 2;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+
+.categoria {
+    position: relative;
+    width: 600px;    /* Menos alto, más apaisado */
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.categoria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.categoria:hover img {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.categoria h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    transform: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 24px;
+    letter-spacing: 10px;
+    font-weight: 100;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    transition: transform 0.3s ease; /* transición para el movimiento */
+}
+
+.categoria:hover h2 {
+    transform: translateY(-10px); /* sube 10px al hacer hover */
+}
+
+.seccion-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .fondorepetido {
+    height: 400px;
+    background-size: contain; /* Achica la imagen al ancho del contenedor */
+    background-repeat: repeat-x; /* Se sigue repitiendo */
+    background-position: top center;
+  }
+
+  .contenido-texto {
+    top: 35%;
+    transform: translate(-50%, -35%);
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 48px;
+    letter-spacing: 0.1cap;
+    text-align: center;
+  }
+
+  .categoria {
+    width: 450px;    /* Menos alto, más apaisado */
+    height: 150px;
+  }
+
+  .seccion-categorias{
+    margin: 0 0 0 0;
+    gap: 10px;
+  }
+  
+  .seccion-categorias .categoria h2 {
+    font-size: 6px;
+}
+}
+@media (max-width: 480px) {
+  .fondorepetido {
+    height: 320px;
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}

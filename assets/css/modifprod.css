@@ -1,0 +1,99 @@
+
+
+/* Fondo con imagen */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../img/fondohome.jpg');
+  background-repeat: repeat-x;
+  background-size: auto;
+  background-position: top left;
+  z-index: -2;
+  pointer-events: none;
+  font-family: Montserrat;
+}
+
+/* Capa negra semitransparente encima */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65); 
+  z-index: -1;
+  pointer-events: none;
+  font-family: Montserrat;
+}
+
+h2 {
+  color: #A68E6D;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-family: Montserrat;
+}
+
+label{
+    color: white;
+    font-family: Montserrat;
+}
+
+/* Centrar todo el contenido vertical y horizontalmente */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenedor del formulario para controlar tamaño y espaciado */
+form {
+  background-color: rgba(255, 255, 255, 0.658);
+  padding: 30px 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* <--- menos espacio entre campos */
+}
+
+
+/* Etiquetas */
+label {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Botón */
+button[type="submit"] {
+  background-color: #A68E6D;
+  color: white;
+  padding: 12px 0;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #8b7a53;
+}

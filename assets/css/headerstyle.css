@@ -1,0 +1,131 @@
+body {
+  padding-top: 70px;
+}
+
+.menu-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.374);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 6px 20px;
+  z-index: 10000;
+  font-family: Montserrat, sans-serif;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.menu-contenido {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.menu-contenido a,
+.menu-contenido button {
+  color: #A68E6D;
+  text-decoration: none;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu-contenido a:hover,
+.menu-contenido button:hover {
+  color: #7a5f2d;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  min-width: 160px;
+  z-index: 10001;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#carrito-icono {
+  font-size: 20px;
+  position: relative;
+}
+
+#btn-buscar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+#btn-buscar svg {
+  width: 24px;
+  height: 24px;
+  fill: #A68E6D;
+}
+
+.menu-principal.scrolled {
+  background-color: rgba(195, 190, 190, 0.486);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu-principal.scrolled a {
+  color: rgb(74, 74, 74);
+}
+
+/* === MEDIA QUERY MÓVIL === */
+@media (max-width: 1000px) {
+  .menu-contenido {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu-contenido.activo {
+    display: flex;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  #carrito-icono,
+  #btn-buscar {
+    font-size: 18px;
+  }
+}

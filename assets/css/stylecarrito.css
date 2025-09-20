@@ -1,0 +1,213 @@
+body {
+    font-family: 'Montserrat';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Contenedor con fondo de imagen que se repite en X e Y */
+.fondo-contenido {
+    position: relative;
+    width: 100%;
+    min-height: 100%; /* crece con el contenido */
+    background-image: url('../img/bolsa.jpg'); /* ajusta la ruta según tu proyecto */
+    background-repeat: repeat; /* se repite horizontal y verticalmente */
+    background-size: 300px auto;
+    background-position: top left;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Contenido encima de la imagen */
+.fondo-contenido .contenido {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 100%;
+    /* Opcional: fondo semitransparente para mejorar legibilidad */
+    background-color: rgb(237 229 229 / 75%); 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px 30px;
+}
+
+.fondo-contenido .contenido {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Flex container para formulario pago */
+.form-pago {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-pago label {
+    flex: 1 0 100%;
+    text-align: center;
+}
+
+.form-pago input[type="email"],
+.form-pago input[type="text"],
+.form-pago select {
+    flex: 1 0 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Checkbox coordinar envio */
+.coordinar-envio-container {
+    flex: 1 0 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.coordinar-envio-container label {
+    cursor: pointer;
+}
+
+.coordinar-envio-container input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Botones pagar y seguir comprando alineados */
+.btns-finalizar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.btns-finalizar a,
+.btns-finalizar button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    min-width: 180px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btns-finalizar a {
+    background-color: #A68E6D;
+    color: white;
+    display: inline-block;
+}
+
+.btns-finalizar a:hover {
+    background-color: #8b7952;
+}
+
+.btns-finalizar button {
+    background-color: #5a4a2a;
+    color: white;
+}
+
+.btns-finalizar button:hover {
+    background-color: #453a20;
+}
+
+/* Resultado envío */
+#resultado-envio {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #5a4a2a;
+}
+
+/* Botón Vaciar */
+.btn-vaciar {
+    background-color: #A68E6D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family:Montserrat;
+}
+
+.btn-vaciar:hover {
+    background-color: #A68E6D;
+}
+
+/* Botones dentro del formulario */
+form button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #A68E6D;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* ----------- NUEVOS ESTILOS PARA CUPON Y ENVIO ----------- */
+
+/* Centrar formulario cupón y que esté en fila con gap */
+.form-cupon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Input y botón del cupón con estilo para que se vean bien alineados */
+.form-cupon input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.form-cupon button {
+    padding: 8px 15px;
+    background-color: #A68E6D;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family:Montserrat;
+}
+
+.form-cupon button:hover {
+    background-color: #8b7952;
+}
+
+/* Botón aplicar envío más cerca del select provincia */
+#provincia {
+    margin-bottom: 5px;
+    font-family:Montserrat;
+}
+
+/* Reduce margen superior del botón aplicar envío */
+#btn-calcular-envio {
+    margin-top: 0;
+    font-family:Montserrat;
+}

@@ -1,0 +1,131 @@
+body{
+    background-color: #9373733c;
+}
+
+.productos {
+    padding: 20px;
+    max-width: 1350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.productos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+h3, .precio{/*nombre producto*/
+    font-family: Montserrat;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 0px;
+} 
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.producto {
+    background-color: #ffffff7e;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+}
+
+.imagen-link img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imagen-link:hover img {
+    transform: scale(1.05);
+}
+
+.producto h3 {
+    font-size: 1.3rem;
+    margin: 15px 0 -10px;
+    color: #333;
+}
+
+.talle{
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.sinstock{
+    font-family: Montserrat;
+    color: #8b7952;
+    
+}
+
+.producto .agregar-carrito {
+    font-family: Montserrat;
+    display: inline-block;
+    margin: 15px auto 20px;
+    padding: 10px 25px;
+    background-color: #A68E6D;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.producto .agregar-carrito:hover {
+    background-color: #8b7952;
+}
+
+.agregar-carrito:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: grayscale(50%);
+    margin: 0px auto 20px;
+ }
+
+@media (max-width: 1000px) {
+    .grid-productos {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .producto {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .imagen-link img {
+        height: 250px;
+    }
+
+    producto .h2,
+    .precio,
+    .talle {
+        font-size: 10x;
+    }
+
+    .producto h3 {
+        font-size: 1.1rem;
+    }
+
+    .producto .agregar-carrito {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
